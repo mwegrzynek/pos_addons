@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pos_pfp_config_view_form" model="ir.ui.view">
+        <field name="name">pos.pfp.config.form.view</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('pos_iot_config')]" position="inside">
+                <div class="row">
+                    <label string="Polish Fiscal Printer" for="pfp_print_through" class="col-lg-4 o_light_label"/>
+                    <field name="pfp_print_through"/>
+                </div>
+                <div class="row" attrs="{'invisible': [('pfp_print_through', '=', False)]}">
+                    <label string="PFP Cashdrawer" for="pfp_cashdrawer" class="col-lg-4 o_light_label"/>
+                    <field name="pfp_cashdrawer"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

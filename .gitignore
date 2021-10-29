@@ -1,0 +1,11 @@
+.project
+.pydevproject
+.settings
+*.pyc
+*.mo
+.DS_Store
+*egg-info*
+.cache
+*.pyc
+.pytest*
+__pycache__
